@@ -69,4 +69,4 @@ All communication between VLANs is controlled through OPNsense firewall rules.
 
 ## High-Level Network Flow
 
-![Network Design](images/network-diagram-light.svg)
+![Network Design](/images/network-diagram-light.svg)

@@ -1,0 +1,262 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" font-family="'Segoe UI', Helvetica, Arial, sans-serif">
+
+  <!-- ============ DEFS ============ -->
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#eef2f7"/>
+    </linearGradient>
+
+    <linearGradient id="fwGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#fff3e8"/>
+    </linearGradient>
+
+    <linearGradient id="swGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f1f5f9"/>
+    </linearGradient>
+
+    <linearGradient id="userGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#ecfdf5"/>
+    </linearGradient>
+
+    <linearGradient id="serverGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#eff6ff"/>
+    </linearGradient>
+
+    <pattern id="dotGrid" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="1.2" cy="1.2" r="1.2" fill="#dbe3ee"/>
+    </pattern>
+
+    <filter id="softShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="8" stdDeviation="14" flood-color="#1e293b" flood-opacity="0.10"/>
+    </filter>
+    <filter id="tinyShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#1e293b" flood-opacity="0.08"/>
+    </filter>
+
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0ea5e9"/>
+    </marker>
+    <marker id="arrowSlate" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#94a3b8"/>
+    </marker>
+    <marker id="arrowAmber" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2563eb"/>
+    </marker>
+    <marker id="arrowGreen" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#059669"/>
+    </marker>
+  </defs>
+
+  <!-- ============ BACKGROUND ============ -->
+  <rect x="0" y="0" width="1200" height="800" fill="url(#bgGrad)"/>
+  <rect x="0" y="0" width="1200" height="800" fill="url(#dotGrid)" opacity="0.5"/>
+
+  <!-- ============ WAN1 / PRIMARY INTERNET ============ -->
+  <g filter="url(#tinyShadow)">
+    <circle cx="150" cy="95" r="38" fill="#ffffff" stroke="#0ea5e9" stroke-width="2.5"/>
+    <circle cx="150" cy="95" r="20" fill="none" stroke="#0ea5e9" stroke-width="1.8"/>
+    <ellipse cx="150" cy="95" rx="8" ry="20" fill="none" stroke="#0ea5e9" stroke-width="1.4"/>
+    <line x1="130" y1="95" x2="170" y2="95" stroke="#0ea5e9" stroke-width="1.4"/>
+    <line x1="133" y1="85" x2="167" y2="85" stroke="#0ea5e9" stroke-width="1.2"/>
+    <line x1="133" y1="105" x2="167" y2="105" stroke="#0ea5e9" stroke-width="1.2"/>
+  </g>
+  <text x="150" y="155" text-anchor="middle" fill="#334155" font-size="14" font-weight="600">ISP 1</text>
+  <text x="150" y="172" text-anchor="middle" fill="#94a3b8" font-size="12">Primary Uplink</text>
+
+  <line x1="188" y1="95" x2="335" y2="95" stroke="#0ea5e9" stroke-width="2.5" marker-end="url(#arrowBlue)"/>
+  <g filter="url(#tinyShadow)">
+    <rect x="196" y="66" width="132" height="22" rx="11" fill="#0ea5e9"/>
+    <text x="262" y="81" text-anchor="middle" fill="#ffffff" font-size="11.5" font-weight="700">WAN1 &#8226; ACTIVE</text>
+  </g>
+
+  <!-- ============ WAN2 / BACKUP INTERNET ============ -->
+  <g filter="url(#tinyShadow)">
+    <circle cx="1050" cy="95" r="38" fill="#ffffff" stroke="#94a3b8" stroke-width="2.5"/>
+    <circle cx="1050" cy="95" r="20" fill="none" stroke="#94a3b8" stroke-width="1.8"/>
+    <ellipse cx="1050" cy="95" rx="8" ry="20" fill="none" stroke="#94a3b8" stroke-width="1.4"/>
+    <line x1="1030" y1="95" x2="1070" y2="95" stroke="#94a3b8" stroke-width="1.4"/>
+    <line x1="1033" y1="85" x2="1067" y2="85" stroke="#94a3b8" stroke-width="1.2"/>
+    <line x1="1033" y1="105" x2="1067" y2="105" stroke="#94a3b8" stroke-width="1.2"/>
+  </g>
+  <text x="1050" y="155" text-anchor="middle" fill="#334155" font-size="14" font-weight="600">ISP 2</text>
+  <text x="1050" y="172" text-anchor="middle" fill="#94a3b8" font-size="12">Backup Uplink</text>
+
+  <line x1="1012" y1="95" x2="565" y2="95" stroke="#94a3b8" stroke-width="2.5" stroke-dasharray="7 5" marker-end="url(#arrowSlate)"/>
+  <g filter="url(#tinyShadow)">
+    <rect x="872" y="66" width="140" height="22" rx="11" fill="#94a3b8"/>
+    <text x="942" y="81" text-anchor="middle" fill="#ffffff" font-size="11.5" font-weight="700">WAN2 &#8226; STANDBY</text>
+  </g>
+
+  <!-- ============ FIREWALL (OPNsense) ============ -->
+  <g filter="url(#softShadow)">
+    <rect x="335" y="30" width="230" height="172" rx="16" fill="url(#fwGrad)" stroke="#f97316" stroke-width="2"/>
+
+    <g transform="translate(450,83)">
+      <path d="M0 -30 L24 -20 V5 C24 24 11 35 0 41 C-11 35 -24 24 -24 5 V-20 Z"
+            fill="#fff7ed" stroke="#f97316" stroke-width="2.4"/>
+      <path d="M-10 0 L-2 9 L13 -11" fill="none" stroke="#f97316" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+
+    <text x="450" y="140" text-anchor="middle" fill="#0f172a" font-size="18" font-weight="700">OPNsense</text>
+    <text x="450" y="159" text-anchor="middle" fill="#94a3b8" font-size="12.5">Firewall / Router</text>
+
+    <line x1="355" y1="172" x2="545" y2="172" stroke="#f1e4d5" stroke-width="1"/>
+    <text x="450" y="190" text-anchor="middle" fill="#c2410c" font-size="11" font-weight="600">Gateway Group &#8226; Failover (Tier 1 &#8594; Tier 2)</text>
+  </g>
+  <text x="450" y="220" text-anchor="middle" fill="#94a3b8" font-size="12">em0: WAN1 &#8226; em2: WAN2 &#8226; em1: LAN Trunk</text>
+
+  <!-- Firewall -> Switch trunk -->
+  <line x1="450" y1="204" x2="450" y2="287" stroke="#7c3aed" stroke-width="3" marker-end="url(#arrowBlue)"/>
+  <g filter="url(#tinyShadow)">
+    <rect x="463" y="230" width="160" height="44" rx="9" fill="#ffffff" stroke="#7c3aed" stroke-width="1.5"/>
+    <text x="543" y="248" text-anchor="middle" fill="#6d28d9" font-size="12" font-weight="700">802.1Q Trunk</text>
+    <text x="543" y="265" text-anchor="middle" fill="#a78bfa" font-size="11">em1 &#8226; tags 10, 20</text>
+  </g>
+
+  <!-- ============ MANAGED SWITCH ============ -->
+  <g filter="url(#softShadow)">
+    <rect x="300" y="287" width="300" height="76" rx="12" fill="url(#swGrad)" stroke="#64748b" stroke-width="2"/>
+    <g transform="translate(325,307)">
+      <rect x="0" y="0" width="36" height="24" rx="3" fill="none" stroke="#475569" stroke-width="1.6"/>
+      <line x1="6" y1="6" x2="6" y2="18" stroke="#475569" stroke-width="1.4"/>
+      <line x1="14" y1="6" x2="14" y2="18" stroke="#475569" stroke-width="1.4"/>
+      <line x1="22" y1="6" x2="22" y2="18" stroke="#475569" stroke-width="1.4"/>
+      <line x1="30" y1="6" x2="30" y2="18" stroke="#475569" stroke-width="1.4"/>
+    </g>
+    <text x="450" y="320" text-anchor="middle" fill="#0f172a" font-size="16" font-weight="700">Managed VLAN Switch</text>
+    <text x="450" y="340" text-anchor="middle" fill="#94a3b8" font-size="12">Trunk in &#8226; two tagged VLANs out</text>
+  </g>
+
+  <!-- Switch -> Access branches -->
+  <line x1="350" y1="363" x2="350" y2="402" stroke="#059669" stroke-width="2.5"/>
+  <line x1="350" y1="402" x2="185" y2="402" stroke="#059669" stroke-width="2.5"/>
+  <line x1="185" y1="402" x2="185" y2="452" stroke="#059669" stroke-width="2.5" marker-end="url(#arrowGreen)"/>
+
+  <line x1="550" y1="363" x2="550" y2="402" stroke="#2563eb" stroke-width="2.5"/>
+  <line x1="550" y1="402" x2="715" y2="402" stroke="#2563eb" stroke-width="2.5"/>
+  <line x1="715" y1="402" x2="715" y2="452" stroke="#2563eb" stroke-width="2.5" marker-end="url(#arrowAmber)"/>
+
+  <g filter="url(#tinyShadow)">
+    <rect x="100" y="370" width="170" height="42" rx="9" fill="#ffffff" stroke="#059669" stroke-width="1.5"/>
+    <text x="185" y="387" text-anchor="middle" fill="#047857" font-size="12" font-weight="700">VLAN 10 &#8226; Access</text>
+    <text x="185" y="403" text-anchor="middle" fill="#10b981" font-size="11">DHCP enabled</text>
+  </g>
+
+  <g filter="url(#tinyShadow)">
+    <rect x="630" y="370" width="170" height="42" rx="9" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+    <text x="715" y="387" text-anchor="middle" fill="#1d4ed8" font-size="12" font-weight="700">VLAN 20 &#8226; Access</text>
+    <text x="715" y="403" text-anchor="middle" fill="#3b82f6" font-size="11">Static IPs</text>
+  </g>
+
+  <!-- ============ USER NETWORK BOX ============ -->
+  <g filter="url(#softShadow)">
+    <rect x="60" y="452" width="480" height="308" rx="18" fill="url(#userGrad)" stroke="#10b981" stroke-width="2"/>
+    <text x="90" y="492" fill="#047857" font-size="20" font-weight="700">User Network</text>
+    <text x="90" y="512" fill="#059669" font-size="12.5">VLAN 10 &#8226; 192.168.10.0/24 &#8226; GW 192.168.10.1</text>
+
+    <g transform="translate(120,552)">
+      <rect x="0" y="0" width="92" height="58" rx="5" fill="#ffffff" stroke="#10b981" stroke-width="1.8"/>
+      <rect x="8" y="8" width="76" height="42" rx="2" fill="#ecfdf5"/>
+      <rect x="32" y="64" width="28" height="8" fill="#94a3b8"/>
+      <rect x="18" y="72" width="56" height="6" rx="2" fill="#94a3b8"/>
+      <text x="46" y="102" text-anchor="middle" fill="#047857" font-size="12" font-weight="600">Desktop</text>
+      <text x="46" y="117" text-anchor="middle" fill="#94a3b8" font-size="10.5">.10.50</text>
+    </g>
+
+    <g transform="translate(260,552)">
+      <path d="M0 42 h92 l-10 14 h-72 z" fill="#ffffff" stroke="#10b981" stroke-width="1.8"/>
+      <rect x="8" y="0" width="76" height="42" rx="3" fill="#ffffff" stroke="#10b981" stroke-width="1.8"/>
+      <rect x="14" y="6" width="64" height="30" fill="#ecfdf5"/>
+      <text x="46" y="88" text-anchor="middle" fill="#047857" font-size="12" font-weight="600">Laptop</text>
+      <text x="46" y="103" text-anchor="middle" fill="#94a3b8" font-size="10.5">.10.51</text>
+    </g>
+
+    <g transform="translate(400,547)">
+      <rect x="18" y="5" width="36" height="60" rx="7" fill="#ffffff" stroke="#10b981" stroke-width="1.8"/>
+      <circle cx="36" cy="55" r="3" fill="#10b981"/>
+      <rect x="24" y="12" width="24" height="34" rx="2" fill="#ecfdf5"/>
+      <path d="M22 -3 a20 20 0 0 1 28 0" fill="none" stroke="#10b981" stroke-width="1.6" opacity="0.55"/>
+      <path d="M27 4 a13 13 0 0 1 18 0" fill="none" stroke="#10b981" stroke-width="1.6" opacity="0.8"/>
+      <text x="36" y="90" text-anchor="middle" fill="#047857" font-size="12" font-weight="600">Wi-Fi / Mobile</text>
+      <text x="36" y="105" text-anchor="middle" fill="#94a3b8" font-size="10.5">.10.x pool</text>
+    </g>
+
+    <rect x="90" y="693" width="420" height="52" rx="10" fill="#ffffff" stroke="#a7f3d0" stroke-width="1.5"/>
+    <text x="110" y="714" fill="#047857" font-size="12" font-weight="700">DHCP Pool</text>
+    <text x="110" y="732" fill="#64748b" font-size="11.5">192.168.10.100 &#8211; 192.168.10.200 &#8226; DNS via OPNsense</text>
+  </g>
+
+  <!-- ============ SERVER NETWORK BOX ============ -->
+  <g filter="url(#softShadow)">
+    <rect x="660" y="452" width="480" height="308" rx="18" fill="url(#serverGrad)" stroke="#3b82f6" stroke-width="2"/>
+    <text x="690" y="492" fill="#1d4ed8" font-size="20" font-weight="700">Server Network</text>
+    <text x="690" y="512" fill="#2563eb" font-size="12.5">VLAN 20 &#8226; 192.168.20.0/24 &#8226; GW 192.168.20.1</text>
+
+    <g transform="translate(700,552)">
+      <g>
+        <rect x="0" y="0" width="72" height="88" rx="5" fill="#ffffff" stroke="#3b82f6" stroke-width="1.8"/>
+        <rect x="8" y="8" width="56" height="12" rx="2" fill="#eff6ff"/>
+        <rect x="8" y="26" width="56" height="12" rx="2" fill="#eff6ff"/>
+        <rect x="8" y="44" width="56" height="12" rx="2" fill="#eff6ff"/>
+        <circle cx="58" cy="14" r="2.2" fill="#3b82f6"/>
+        <circle cx="58" cy="32" r="2.2" fill="#3b82f6"/>
+        <circle cx="58" cy="50" r="2.2" fill="#3b82f6"/>
+        <text x="36" y="115" text-anchor="middle" fill="#1d4ed8" font-size="11.5" font-weight="600">App Server</text>
+        <text x="36" y="129" text-anchor="middle" fill="#94a3b8" font-size="10">.20.10</text>
+      </g>
+      <g transform="translate(108,0)">
+        <rect x="0" y="0" width="72" height="88" rx="5" fill="#ffffff" stroke="#3b82f6" stroke-width="1.8"/>
+        <rect x="8" y="8" width="56" height="12" rx="2" fill="#eff6ff"/>
+        <rect x="8" y="26" width="56" height="12" rx="2" fill="#eff6ff"/>
+        <rect x="8" y="44" width="56" height="12" rx="2" fill="#eff6ff"/>
+        <circle cx="58" cy="14" r="2.2" fill="#3b82f6"/>
+        <circle cx="58" cy="32" r="2.2" fill="#3b82f6"/>
+        <circle cx="58" cy="50" r="2.2" fill="#3b82f6"/>
+        <text x="36" y="115" text-anchor="middle" fill="#1d4ed8" font-size="11.5" font-weight="600">DB Server</text>
+        <text x="36" y="129" text-anchor="middle" fill="#94a3b8" font-size="10">.20.11</text>
+      </g>
+      <g transform="translate(216,0)">
+        <rect x="0" y="0" width="72" height="88" rx="5" fill="#ffffff" stroke="#3b82f6" stroke-width="1.8"/>
+        <rect x="8" y="8" width="56" height="12" rx="2" fill="#eff6ff"/>
+        <rect x="8" y="26" width="56" height="12" rx="2" fill="#eff6ff"/>
+        <rect x="8" y="44" width="56" height="12" rx="2" fill="#eff6ff"/>
+        <circle cx="58" cy="14" r="2.2" fill="#3b82f6"/>
+        <circle cx="58" cy="32" r="2.2" fill="#3b82f6"/>
+        <circle cx="58" cy="50" r="2.2" fill="#3b82f6"/>
+        <text x="36" y="115" text-anchor="middle" fill="#1d4ed8" font-size="11.5" font-weight="600">NAS</text>
+        <text x="36" y="129" text-anchor="middle" fill="#94a3b8" font-size="10">.20.12</text>
+      </g>
+      <g transform="translate(324,0)">
+        <rect x="0" y="0" width="72" height="88" rx="5" fill="#ffffff" stroke="#3b82f6" stroke-width="1.8"/>
+        <rect x="8" y="8" width="56" height="12" rx="2" fill="#eff6ff"/>
+        <rect x="8" y="26" width="56" height="12" rx="2" fill="#eff6ff"/>
+        <rect x="8" y="44" width="56" height="12" rx="2" fill="#eff6ff"/>
+        <circle cx="58" cy="14" r="2.2" fill="#3b82f6"/>
+        <circle cx="58" cy="32" r="2.2" fill="#3b82f6"/>
+        <circle cx="58" cy="50" r="2.2" fill="#3b82f6"/>
+        <text x="36" y="115" text-anchor="middle" fill="#1d4ed8" font-size="11.5" font-weight="600">Backup</text>
+        <text x="36" y="129" text-anchor="middle" fill="#94a3b8" font-size="10">.20.13</text>
+      </g>
+    </g>
+
+    <rect x="690" y="693" width="420" height="52" rx="10" fill="#ffffff" stroke="#bfdbfe" stroke-width="1.5"/>
+    <text x="710" y="714" fill="#1d4ed8" font-size="12" font-weight="700">Static Assignment</text>
+    <text x="710" y="732" fill="#64748b" font-size="11.5">192.168.20.10 &#8211; .50 &#8226; No inbound access from VLAN 10</text>
+  </g>
+
+  <!-- ============ LEGEND ============ -->
+  <g transform="translate(60,782)">
+    <circle cx="0" cy="0" r="5" fill="#0ea5e9"/><text x="12" y="4" fill="#475569" font-size="11.5">WAN1 (Active)</text>
+    <circle cx="140" cy="0" r="5" fill="#94a3b8"/><text x="152" y="4" fill="#475569" font-size="11.5">WAN2 (Standby)</text>
+    <circle cx="290" cy="0" r="5" fill="#7c3aed"/><text x="302" y="4" fill="#475569" font-size="11.5">802.1Q Trunk</text>
+    <circle cx="430" cy="0" r="5" fill="#059669"/><text x="442" y="4" fill="#475569" font-size="11.5">VLAN 10</text>
+    <circle cx="540" cy="0" r="5" fill="#2563eb"/><text x="552" y="4" fill="#475569" font-size="11.5">VLAN 20</text>
+    <text x="1140" y="4" fill="#94a3b8" font-size="11" text-anchor="end">Failover: WAN1 down &#8594; auto-switch to WAN2</text>
+  </g>
+
+</svg>

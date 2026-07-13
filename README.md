@@ -29,7 +29,7 @@ This project covers the implementation of:
 
 > **Network Design Diagram**
 
-![Network Design](images/network-design.png)
+![Network Design](/images/network-diagram-multiwan.svg)
 
 ---
 
